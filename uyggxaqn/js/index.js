@@ -1,16 +1,9 @@
 $(function(){
-	if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
-				if(/Android|webOS|iPhone|iPod|BlackBerry|iPad/i.test(navigator.userAgent)) {
-				}
-			} else {
-				//电脑打开
-				window.location.href = 'rtsm.html'
-			}
+	
 	var this1 = "";
 	var x = 0
 	var color = ['#fb0948','#f209fb','#0303fb','#03befb','#03fb32','#f8fb03','#fbb203'];
 	var bacol = ["247,99,191,","247,89,191,","247,79,191,","247,69,191,","247,59,191,","247,49,191,","247,39,191,"]
-
 
 	var liyong = "JXU2NzRFJXU1MkM3"
 	var name = [
@@ -71,9 +64,13 @@ $(function(){
 					if(name1==decode64(liyong)){
 						$('#name1').val("")
 						$('#name1').attr('placeholder',"恭喜您发现彩蛋，但李勇没有巧乐兹！")
+						$('.ihawaw').show()
 						$('#name1').focus(function(){
 							hint()
 						})
+						setTimeout(function(){
+							$(window).scrollTop(250)
+						},1000)
 					}else{
 						
 						$.each(name, function(index, rss) {
