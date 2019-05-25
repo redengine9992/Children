@@ -12,6 +12,15 @@
 		<script src="js/clipboard.min_1.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<script type="text/javascript">
+			if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+				if(/Android|webOS|iPhone|iPod|BlackBerry|iPad/i.test(navigator.userAgent)) {
+				}
+			} else {
+				//电脑打开
+				window.location.href = 'rtsm.html'
+			}
+		</script>
+	<script type="text/javascript">
 		setFontSize();
 	window.addEventListener("resize", setFontSize, false);
 
@@ -53,6 +62,10 @@ function setFontSize() {
 					<div class="vbr2">好的</div>
 				</div>
 			</div>
+			<div class="ihawaw">
+				<p>恭喜你发现<span style="color: red;font-weight: 600;">彩蛋！</span>截图发给我<br />免费获得下一次活动名额一个</p>
+				<img src="images/ihawx.jpg"/>
+			</div>
 		</div>
 	</body>
 		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
@@ -73,13 +86,6 @@ function setFontSize() {
 				}, false);
 			}(window, location));
 		</script>
-		<script type="text/javascript">
-			function myFunction() {
-   return nmus() 
-}
-			function nmus(){
-				alert(111)
-			}
-		</script>
+		
 
 </html>
